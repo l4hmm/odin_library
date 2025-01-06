@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-background: #FFFFFF;
+  --secondary-background: #FFFFFF;
+  --text-color: #001643;
+  --font: Roboto, monospace, sans-serif;
+  --spacing-unit: 1rem;
+  --heading-text-size: 3rem;
+  --body-text-size: 2rem;
+  --info-text-size: 1rem;
+}
+
+body {
+  background-color: #eee;
+  font-family: var(--font);
+}
+
+header {
+  margin-left: 350px;
+}
+
+.search-container {
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: red;
+}
+
+.header-input {
+  width: 400px;
+  height: 50px;
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: var(--info-text-size);
+  border: 1px solid #ccc;
+  padding-left: 45px;
+}
+
+.header-input::placeholder{
+  color: #7c7c7c;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  font-size: 18px;
+  color: #aaa;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--secondary-background);
+  padding: 20px;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.sidebar::placeholder{
+  color: #7c7c7c;
+}
+
+
+.sidebar h2 {
+  text-align: center;
+  margin-top: 15px;
+  font-size: var(--heading-text-size);
+}
+
+.sidebar-content input[type="text"] {
+  width: 90%;
+  height: 50px;
+  border-radius: 8px;
+  font-size: var(--info-text-size);
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  margin-bottom: 50px;
+}
+
+.sidebar-content input[type="text"]:focus,
+.header-input:focus {
+  border-color: #0fa37f; /* Green border on focus */
+  outline: none; /* Remove the default blue outline */
+}
+
+.sidebar-content input[type="text"]:focus::placeholder,
+.header-input:focus::placeholder {
+  opacity: 0; /* Makes the placeholder text disappear when focused */
+}
+
+
+.sidebar-content label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+  color: #7c7c7c;
+  cursor: pointer;
+  font-size: var(--info-text-size);
+}
+
+
+.custom-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-left: 80px;
+  border: 1px solid #7c7c7c;
+  border-radius: 3px;
+  background-color: var(--secondary-background);
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  }
+
+  .custom-checkbox input[type="checkbox"]:checked {
+    background-color: #0fa37f; /* Background color when checked */
+    border-color: #001643; /* Border color when checked */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .custom-checkbox input[type="checkbox"]:checked::after {
+    content: "✓";
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar button {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #0fa37f; /* Matching green background */
+    color: #FFFFFF; /* White text color */
+    font-size: var(--info-text-size); /* Font size consistent with inputs */
+    border: 1px solid #0fa37f; /* Same green border color */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .sidebar button:hover {
+    background-color: #0b8567; /* Dark blue background on hover */
+    border-color: #0b8567; /* Dark blue border on hover */
+  }
+
+  /* Book Grid Section */
+.book-grid {
+  margin-left: 320px; /* Offset from sidebar */
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+}
+
+.book-card {
+  background-color: var(--secondary-background);
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.book-card p {
+  font-size: 1rem;
+  color: #666;
+}
