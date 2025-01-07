@@ -4,56 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="/images/book-icon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search"
     />
-    <title>The Odin Library</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Odins Library</title>
   </head>
   <body>
-    <!-- Header -->
-    <header>
-      <div class="search">
+    <div class="container">
+      <!-- Nav bar/search bar-->
+      <nav>
         <form action="#" method="get">
           <div class="search-container">
             <span class="material-symbols-outlined search-icon">search</span>
             <input
-              class="header-input"
+              class="search-bar nav-search"
               name="fsrch"
               id="fsrch"
               placeholder="Search your favourite books"
             />
           </div>
         </form>
-      </div>
-    </header>
+      </nav>
 
-    <!-- Side Bar/book input -->
-    <div class="sidebar">
-      <div class="sidebar-content">
-        <h2>Library</h2>
-        <div class="input-container"></div>
-        <input type="text" id="bookName" placeholder="Enter book heading..." />
-        <input type="text" id="bookAuthor" placeholder="Enter book author..." />
-        <input
-          type="text"
-          id="bookPages"
-          placeholder="Enter number of pages..."
-        />
+      <!-- Side bar content -->
+      <aside class="sidebar">
+        <div class="sidebar-content">
+          <h2>Library</h2>
+          <div class="input-container"></div>
+          <input
+            class="search-bar sidebar-search"
+            type="text"
+            id="bookName"
+            placeholder="Enter book heading..."
+          />
+          <input
+            class="search-bar sidebar-search"
+            type="text"
+            id="bookAuthor"
+            placeholder="Enter book author..."
+          />
+          <input
+            class="search-bar sidebar-search"
+            type="text"
+            id="bookPages"
+            placeholder="Enter number of pages..."
+          />
 
-        <div class="custom-checkbox">
-          <label class="checkbox-text"
-            >Have you read this book?
-            <input type="checkbox" id="bookRead" />
-          </label>
+          <div class="custom-checkbox">
+            <label class="checkbox-text"
+              >Have you read this book?
+              <input type="checkbox" id="bookRead" />
+            </label>
+          </div>
+          <button type="submit" id="addBookButton">Add book</button>
         </div>
-        <button type="submit" id="addBookButton">Add book</button>
+      </aside>
+
+      <!-- Error message pop up -->
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <div class="popup-close-button">
+            <button id="popup-close">X</button>
+          </div>
+          <span id="popup-message"></span>
+        </div>
       </div>
+
+      <!-- Book Grid Content -->
+      <main>
+        <div class="book-grid"></div>
+      </main>
+
+      <!-- Book Grid Content -->
+      <footer class="footer">
+        <p>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          L4hmm
+        </p>
+        <a href="https://github.com/l4hmm" target="_blank">
+          <i class="fab fa-github"></i
+        ></a>
+      </footer>
     </div>
-
-    <!-- Main content/grid of added books -->
-    <div class="book-grid"></div>
-
     <script src="script.js"></script>
   </body>
 </html>
